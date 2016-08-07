@@ -1,3 +1,5 @@
+var request = require('request');
+
 Date.prototype.getWeek = function() {
     var onejan = new Date(this.getFullYear(), 0, 1);
     return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
@@ -36,16 +38,35 @@ startTime();
 var x = 0;
 var myVar = setInterval(changeScreen, 5000);
 
-var tabs = ['home','string','dev','ask'];
+var tabs = ['home','string','dev','ask', 'back-log'];
 
 function changeScreen(){
     
     x++;
 
-    x = x%4;
+    x = x%5;
 
-    for(var i = 0; i < 4 ; i++){
+    for(var i = 0; i < 5 ; i++){
         if(i == x){
+            if(i == 4){
+
+                options = {
+                    url: 'https://lightwave.atlassian.net/rest/api/2/search?jql=assignee=test',
+                    headers: {
+                        'Authorization': 'Basic amVubnkuc29uZzAxOlRlc3QxMjM='
+                    }   
+                }
+                request(options, function (error, response, body) {
+                
+                    if (!error && response.statusCode == 200) {
+                        //console.log(body) // Show the HTML for the Google homepage.
+            
+                        document.getElementById('back-log').innerHTML = backlogItem + ' items ';
+                    }
+                })
+
+            }
+
             document.getElementById(tabs[x]).style.display = 'block';
             document.getElementById(tabs[x]).className = "animated slideInRight";
         }else{
@@ -54,6 +75,9 @@ function changeScreen(){
         }
     }
 }
+
+
+    
 
 
 var today = new Date();
@@ -66,4 +90,3 @@ document.getElementById('ask-mode').innerHTML = 'in ' + askMode + ' days';
 
 var backlogItem;
 
-document.getElementById('back-log').innerHTML = backlogItem + ' items ';
