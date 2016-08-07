@@ -47,7 +47,7 @@ function changeScreen(){
 
     for(var i = 0; i < 5 ; i++){
         if(i == x){
-            if(i == 0){
+            if(i == 4){
 
                 options = {
                     url: 'https://lightwave.atlassian.net/rest/api/2/search?jql=project%20%3D%20LIG%20AND%20fixVersion%20%3D%20"Version%202.0"',
