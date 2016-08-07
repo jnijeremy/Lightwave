@@ -26,7 +26,6 @@ function checkTime(i) {
     return i;
 }
 
-
 var weekNumber = (new Date()).getWeek();
 var wave = Math.round(weekNumber/2);
 var week = weekNumber % 2 ? 1 : 2;
@@ -90,4 +89,20 @@ document.getElementById('dev-close').innerHTML = 'in ' + devClose + ' days';
 document.getElementById('ask-mode').innerHTML = 'in ' + askMode + ' days';
 
 var backlogItem;
+
+document.getElementById("demo").onclick = function() {
+    setTimeout(showGarriet(), 200);
+    hideGarriet();
+};
+
+function showGarriet() {
+    console.log("show");
+    document.getElementById('html').style.background = "garriet.png";
+    document.getElementById('html').style.background-size = "cover";    
+}
+
+function hideGarriet() {
+    console.log("hide");
+    document.getElementById('html').style.background-size= "0 0";
+}
 
