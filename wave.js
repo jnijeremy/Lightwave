@@ -81,6 +81,8 @@ function changeScreen(){
 
 var today = new Date();
 var stringFreeze = week === 1 ? 11 - today.getDay() : 4 - today.getDay();
+if (today.getDay() == 0)
+    stringFreeze -= 7;
 var devClose = stringFreeze + 1;
 var askMode = stringFreeze + 4;
 document.getElementById('string-freeze').innerHTML = 'in ' + stringFreeze + ' days';
