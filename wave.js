@@ -65,3 +65,5 @@ document.getElementById('dev-close').innerHTML = 'in ' + devClose + ' days';
 document.getElementById('ask-mode').innerHTML = 'in ' + askMode + ' days';
 
 var backlogItem;
+
+document.getElementById('back-log').innerHTML = backlogItem + ' items ';
