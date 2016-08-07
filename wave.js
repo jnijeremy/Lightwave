@@ -26,7 +26,6 @@ function checkTime(i) {
     return i;
 }
 
-
 var weekNumber = (new Date()).getWeek();
 var wave = Math.round(weekNumber/2);
 var week = weekNumber % 2 ? 1 : 2;
@@ -90,4 +89,24 @@ document.getElementById('dev-close').innerHTML = 'in ' + devClose + ' days';
 document.getElementById('ask-mode').innerHTML = 'in ' + askMode + ' days';
 
 var backlogItem;
+
+
+
+document.getElementById("demo").onclick = function() {
+    showGarriet();
+};
+
+function showGarriet() {
+    console.log("show");
+    document.getElementById('demo').style.background = "url('garriet.png')";
+    document.getElementById('demo').style.backgroundSize = "cover";
+    document.getElementById(tabs[x]).style.display = 'none';
+    setTimeout(function() {
+        document.getElementById('demo').style.backgroundSize= "0 0";
+        document.getElementById('demo').style.backgroundColor= "black";
+        document.getElementById(tabs[x]).style.display = 'block';
+    }, 2000);
+}
+
+
 
