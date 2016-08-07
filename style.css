@@ -1,0 +1,41 @@
+body{
+	background-color: black; 
+}
+
+p{
+	color: white;
+}
+
+#header{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	color: white; 
+}
+
+#logo{
+	position: absolute;
+	right: 50px;
+	top: 20px;
+	width: 60px;
+}
+
+.space-left{
+	margin-left: 20px;
+}
+
+.inline{
+	display: inline;
+}
+
+.big{
+	font-size: 70px;
+	color: #f8b000;
+}
+.medium{
+	font-size: 50px;	
+}
+
+.small{
+	font-size: 20px;
+}
+

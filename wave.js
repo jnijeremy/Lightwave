@@ -32,7 +32,7 @@ var wave = Math.round(weekNumber/2);
 var week = weekNumber % 2 ? 1 : 2;
 document.getElementById('current-wave').innerHTML = 'Wave ' + wave;
 document.getElementById('current-week').innerHTML = 'Week ' + week;
-document.getElementById('header-num').innerHTML = '\n' + wave + '.' + week;
+document.getElementById('header-num').innerHTML = '\n' + wave + '-' + week;
 startTime();
 
 var x = 0;
