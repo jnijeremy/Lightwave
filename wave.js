@@ -90,19 +90,23 @@ document.getElementById('ask-mode').innerHTML = 'in ' + askMode + ' days';
 
 var backlogItem;
 
+
+
 document.getElementById("demo").onclick = function() {
-    setTimeout(showGarriet(), 200);
-    hideGarriet();
+    showGarriet();
 };
 
 function showGarriet() {
     console.log("show");
-    document.getElementById('html').style.background = "garriet.png";
-    document.getElementById('html').style.background-size = "cover";    
+    document.getElementById('demo').style.background = "url('garriet.png')";
+    document.getElementById('demo').style.backgroundSize = "cover";
+    document.getElementById(tabs[x]).style.display = 'none';
+    setTimeout(function() {
+        document.getElementById('demo').style.backgroundSize= "0 0";
+        document.getElementById('demo').style.backgroundColor= "black";
+        document.getElementById(tabs[x]).style.display = 'block';
+    }, 2000);
 }
 
-function hideGarriet() {
-    console.log("hide");
-    document.getElementById('html').style.background-size= "0 0";
-}
+
 
