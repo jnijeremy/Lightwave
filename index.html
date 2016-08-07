@@ -7,20 +7,74 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container animated slideInRight">
-        
-        <div class="row">
-          <div class="col-lg-4">
-            
-          </div>
-          <div class="col-lg-4">
-            <p> <font size="36">Wave 17</font></p>
-            <p><font size="36">Week 1</font></p> 
-          </div>
-          <div class="col-lg-4">
-            
-          </div>
+    <div class="container">
+        <div id="header" style="background-color: lightgrey">
+          <p id="header-num" style="font-size:200%"></p>
         </div>
+        
+        <div class="col-xs-12" style="height:50px;"></div>
+        <!-- Begin Home Tab-->
+        <div class="row" id="home">
+          <div class="col-lg-2"></div>
+
+          <div class="col-lg-8 text-center">
+            <p id="current-wave" style="font-size:700%"></p>
+            <p id="current-week" style="font-size:700%"></p> 
+            <p id="current-date" style="font-size:450%"></p>
+            <p id="current-time" style="font-size:450%"></p>
+          </div>
+          
+          <div class="col-lg-2"></div>
+        </div>
+        <!-- End Home Tab-->
+
+        <!-- Begin String Freeze Tab-->
+        <div class="row" id="string" style="display: none">
+          <div class="col-lg-2"></div>
+
+          <div class="col-lg-8 text-center">
+            <p style="font-size:700%">String Freeze</p>
+            
+            <div class="col-xs-12" style="height:150px;"></div>
+
+            <p id="string-freeze" style="font-size:700%"></p>
+          </div>
+          
+          <div class="col-lg-2"></div>
+        </div>
+        <!-- End Home Tab-->
+
+        <!-- Begin Dev Close Tab-->
+        <div class="row" id="dev" style="display: none">
+          <div class="col-lg-2"></div>
+
+          <div class="col-lg-8 text-center">
+            <p style="font-size:700%">Dev Close</p>
+            
+            <div class="col-xs-12" style="height:150px;"></div>
+
+            <p id="dev-close" style="font-size:700%"></p>
+          </div>
+          
+          <div class="col-lg-2"></div>
+        </div>
+        <!-- End Dev Close Tab-->
+
+        <!-- Begin Ask Mode Tab-->
+        <div class="row" id="ask" style="display: none">
+          <div class="col-lg-2"></div>
+
+          <div class="col-lg-8 text-center">
+            <p style="font-size:700%">Ask Mode</p>
+            
+            <div class="col-xs-12" style="height:150px;"></div>
+
+            <p id="ask-mode" style="font-size:700%"></p>
+          </div>
+          
+          <div class="col-lg-2"></div>
+        </div>
+        <!-- End Ask Mode Tab-->
 
     </div>
   </body>
