@@ -50,7 +50,7 @@ function changeScreen(){
             if(i == 4){
 
                 options = {
-                    url: 'jql=project%20%3D%20LIG%20AND%20status%20in%20("In%20Progress"%2C%20"To%20Do")%20AND%20fixVersion%20%3D%20"Version%202.0"',
+                    url: 'https://lightwave.atlassian.net/rest/api/2/search?jql=project%20%3D%20LIG%20AND%20status%20in%20("In%20Progress"%2C%20"To%20Do")%20AND%20fixVersion%20%3D%20"Version%202.0"',
                     headers: {
                     'Authorization': 'Basic amVubnkuc29uZzAxOlRlc3QxMjM='
                     }   
@@ -99,7 +99,7 @@ document.getElementById("demo").onclick = function() {
 function showGarriet() {
     console.log("show");
     document.getElementById('demo').style.background = "url('garriet.png')";
-    document.getElementById('demo').style.backgroundSize = "cover";
+    document.getElementById('demo').style.backgroundSize = "100% 100%";
     document.getElementById(tabs[x]).style.display = 'none';
     setTimeout(function() {
         document.getElementById('demo').style.backgroundSize= "0 0";
